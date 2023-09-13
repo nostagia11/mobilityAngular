@@ -1,0 +1,51 @@
+
+<h2>Liste candidatures</h2>
+<button  routerLink="/addcand" routerLinkActive="active" class="btn btn-primary" type="button">creer</button>
+
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>nom </th>
+            <th> prenom</th>
+            <th>classe</th>
+            <th>Bac</th>
+            <th>moyenne 1ere</th>
+            <th>moyenne 2eme</th>
+            <th>moyenne 3eme</th>
+            <th>niveau Ang</th>
+            <th>niveau FR</th>
+            <th>credits</th>
+            
+            
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let cand of candidatures">
+            <td>{{cand.nom}}</td>
+            <td>{{cand.prenom}}</td>
+            <td>{{cand.classecourante}}</td>
+            <td>{{cand.moyenneBac}}</td>
+            <td>{{cand.moyennepremiere}}</td>
+            <td>{{cand.moyennedeuxieme}}</td>
+            <td>{{cand.moyennetroixieme}}</td>
+            <td>{{cand.nivAng}}</td>
+            <td>{{cand.nivFR}}</td>
+            <td>{{cand.credits}}</td>
+            
+           
+           
+            
+            
+            <td>
+                <button type="button" class="btn btn-primary" (click)="updateCandidature(cand.id)" class="btn btn-primary" type="button">update</button>
+                <button (click)="deleteCandidature(cand.id)" class="btn btn-danger" >delete</button>
+                <button (click)="detailCandidature(cand.id)" class="btn btn-danger" >view</button>
+            
+            </td>
+        </tr>
+            
+    </tbody>
+</table>
+<button  routerLink="/resultat" routerLinkActive="active" class="btn btn-primary" type="button">Afficher classement</button>
+<router-outlet></router-outlet>

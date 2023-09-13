@@ -1,0 +1,79 @@
+<h3>create offer</h3>
+
+<form #createoffer="ngForm" (ngSubmit) = "OnSubmitOffer(createoffer)">
+    {{offer|json}}
+    
+    <div>
+        <label>nom offer</label>
+        <input type="text" class="form-control" id="nomoffer"
+             [(ngModel)] = "offer.name" name="nomoffer">
+    </div>
+
+    
+    <div>
+        <label>diplome offer</label>
+        <input type="text" class="form-control" id="diplomeoffer"
+             [(ngModel)] = "offer.diplome" name="diplomeoffer">
+    </div>
+
+    <div>
+        <label>description offer</label>
+        <input type="text" class="form-control" id="descriptionoffer"
+             [(ngModel)] = "offer.description" name="descriptionoffer">
+    </div>
+    <div>
+        <label>condition offer</label>
+        <input type="text" class="form-control" id="dconditionoffer"
+             [(ngModel)] = "offer.cond" name="conditionoffer">
+    </div>
+    <div>
+        <label>duree offer</label>
+        <input type="text" class="form-control" id="dureeoffer"
+             [(ngModel)] = "offer.duree" name="dureeoffer">
+    </div>
+    <div>
+        <label>mobilité offer</label>
+        <input type="text" class="form-control" id="mobiliteoffer"
+             [(ngModel)] = "offer.mobilite" name="mobiliteoffer">
+    </div>
+    <div>
+        <label>destination offer</label>
+        <input type="text" class="form-control" id="destinationoffer"
+             [(ngModel)] = "offer.destination" name="destinationoffer">
+    </div>
+    <div>
+        <label>domaine offer</label>
+        <input type="text" class="form-control" id="domaineoffer"
+             [(ngModel)] = "offer.domaine" name="domaineoffer">
+    </div>
+
+ 
+
+    
+    <ng-select [items]="ecoles" 
+           bindLabel="name" 
+           bindValue="id" 
+           [(ngModel)]="offer.ecoles"
+           [compareWith]="selectedCompare"
+           (change)="selected($event)"
+           name="selectuni"
+        >
+</ng-select>
+    
+    
+    
+    
+    
+
+    <button class="btn btn-success" type="submit">
+        Submit
+    </button>
+    
+    
+
+
+
+
+
+</form>
+

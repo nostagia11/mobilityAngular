@@ -1,0 +1,33 @@
+<h3>update ecole</h3>
+
+<form (ngSubmit) = "OnSubmit()">
+    <div>
+        <label>nom ecole</label>
+        <input type="text" class="form-control" id="nomecole"
+             [(ngModel)] = "ecole.name" name="nomecole">
+    </div>
+
+    
+    <div>
+        <label>emplacement ecole</label>
+        <input type="text" class="form-control" id="empacementecole"
+             [(ngModel)] = "ecole.emplacement" name="empacementecole">
+    </div>
+
+    <div>
+        <label>email ecole</label>
+        <input type="text" class="form-control" id="emailecole"
+             [(ngModel)] = "ecole.email" name="emailecole">
+    </div>
+
+    <button class="btn btn-success" type="submit">
+        Submit
+    </button>
+    
+    
+
+
+
+
+
+</form>

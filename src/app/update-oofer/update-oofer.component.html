@@ -1,0 +1,72 @@
+<h3>update offer</h3>
+
+<form (ngSubmit) = "OnSubmit()">
+    <div>
+        <label>nom offer</label>
+        <input type="text" class="form-control" id="nomoffer"
+             [(ngModel)] = "offer.name" name="nomoffer">
+    </div>
+
+    
+    <div>
+        <label>diplome offert</label>
+        <input type="text" class="form-control" id="diplome"
+             [(ngModel)] = "offer.diplome" name="diplome">
+    </div>
+
+    <div>
+        <label>description</label>
+        <input type="text" class="form-control" id="description"
+             [(ngModel)] = "offer.description" name="description">
+    </div>
+
+    <div>
+        <label>condition supplémentaires</label>
+        <input type="text" class="form-control" id="condition"
+             [(ngModel)] = "offer.cond" name="condition">
+    </div>
+    <div>
+        <label>durée d'échange</label>
+        <input type="text" class="form-control" id="duree"
+             [(ngModel)] = "offer.duree" name="duree">
+    </div>
+    <div>
+        <label>mobilite</label>
+        <input type="text" class="form-control" id="mobilite"
+             [(ngModel)] = "offer.mobilite" name="mobilite">
+    </div>
+    <div>
+        <label>destination</label>
+        <input type="text" class="form-control" id="destination"
+             [(ngModel)] = "offer.destination" name="destination">
+    </div>
+    <div>
+        <label>domaine</label>
+        <input type="text" class="form-control" id="domaine"
+             [(ngModel)] = "offer.domaine" name="domaine">
+    </div>
+
+    <ng-select [formGroup]="selecuni" 
+    [items]="ecoles" 
+           bindLabel="name" 
+           bindValue="id" 
+           formControlName="selecteduni"
+           
+           
+        >
+</ng-select>
+    
+
+    <button class="btn btn-success" type="submit">
+        Submit
+    </button>
+    
+
+    
+
+
+
+
+
+</form>
+

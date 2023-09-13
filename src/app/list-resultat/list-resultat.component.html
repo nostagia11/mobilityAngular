@@ -1,0 +1,30 @@
+<h2>Resultat classement</h2>
+
+
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>nom </th>
+            <th> prenom</th>
+            <th>classe</th>
+            <th>Score</th>
+            
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let cand of candidatures">
+            <td>{{cand.nom}}</td>
+            <td>{{cand.prenom}}</td>
+            <td>{{cand.classecourante}}</td>
+            <td>{{cand.score}}</td>
+           
+           
+            
+            
+            
+        </tr>
+            
+    </tbody>
+</table>
+<router-outlet></router-outlet>

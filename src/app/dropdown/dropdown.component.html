@@ -1,0 +1,8 @@
+<div >
+    <label for="exampleFormControlSelect1">Uni offrante</label>
+    <select class="form-control" id="exampleFormControlSelect1"    required>
+        <option selected>choose uni</option>
+        <option *ngFor="let ecole of ecoles" (value)="ecole.id">{{ecole.name}}</option>
+      </select>
+
+</div>

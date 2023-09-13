@@ -1,0 +1,34 @@
+<h2>Liste Universités</h2>
+<button  routerLink="/addecoles" routerLinkActive="active" class="btn btn-primary" type="button">Creér une Ecole</button>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>nom</th>
+            <th> emplacement</th>
+            <th>email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let ecole of ecoles">
+            <td>{{ecole.name}}</td>
+            <td>{{ecole.emplacement}}</td>
+            <td>{{ecole.email}}</td>
+            <td>
+                <button (click)="updateEcole(ecole.id)" class="btn btn-primary" type="button">update</button>
+                <button (click)="deleteEcole(ecole.id)" class="btn btn-danger" >delete</button>
+                <button (click)="detailEcole(ecole.id)" class="btn btn-danger" >view</button>
+            </td>
+        </tr>
+            
+    </tbody>
+</table>
+
+
+
+<router-outlet></router-outlet>
+
+
+
+
+

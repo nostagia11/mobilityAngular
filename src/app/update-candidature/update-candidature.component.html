@@ -1,0 +1,74 @@
+<h3>update candidature</h3>
+
+<form (ngSubmit) = "OnSubmit()">
+    <div>
+        <label>nom </label>
+        <input type="text" class="form-control" id="nomcandidature"
+             [(ngModel)] = "candidature.nom" name="nomcandidature">
+    </div>
+
+    
+    <div>
+        <label>prenom</label>
+        <input type="text" class="form-control" id="prenom"
+             [(ngModel)] = "candidature.prenom" name="prenom">
+    </div>
+
+    <div>
+        <label>classe</label>
+        <input type="text" class="form-control" id="classecourante"
+             [(ngModel)] = "candidature.classecourante" name="classecourante">
+    </div>
+
+    <div>
+        <label>Bac</label>
+        <input type="text" class="form-control" id="moyenneBac"
+             [(ngModel)] = "candidature.moyenneBac" name="moyenneBac">
+    </div>
+    <div>
+        <label>moyenne 1ere</label>
+        <input type="text" class="form-control" id="moyennepremiere"
+             [(ngModel)] = "candidature.moyennepremiere" name="moyennepremiere">
+    </div>
+    <div>
+        <label>moyenne 2eme</label>
+        <input type="text" class="form-control" id="moyennedeuxieme"
+             [(ngModel)] = "candidature.moyennedeuxieme" name="moyennedeuxieme">
+    </div>
+    <div>
+        <label>moyenne 3eme</label>
+        <input type="text" class="form-control" id="moyennetroixieme"
+             [(ngModel)] = "candidature.moyennetroixieme" name="moyennetroixieme">
+    </div>
+    <div>
+        <label>niveau Ang</label>
+        <input type="text" class="form-control" id="nivAng"
+             [(ngModel)] = "candidature.nivAng" name="nivAng">
+    </div>
+    <div>
+        <label>niveau FR</label>
+        <input type="text" class="form-control" id="nivFR"
+             [(ngModel)] = "candidature.nivFR" name="nivFR">
+    </div>
+    <div>
+        <label>credits</label>
+        <input type="text" class="form-control" id="credits"
+             [(ngModel)] = "candidature.credits" name="credits">
+    </div>
+
+    
+    
+
+    <button class="btn btn-success" type="submit">
+        Submit
+    </button>
+    
+
+    
+
+
+
+
+
+</form>
+
